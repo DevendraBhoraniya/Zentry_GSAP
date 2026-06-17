@@ -101,7 +101,3 @@ The project builds to a `dist/` directory. Deploy it to any static hosting servi
 npm run build
 # Upload the dist/ folder to your hosting provider
 ```
-
-## License
-
-MIT
