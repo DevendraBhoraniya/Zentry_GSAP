@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { useRef } from "react";
+import type { MouseEvent } from "react";
 
 import Button from "./Button";
 import AnimatedTitle from "./AnimatedTitle";
@@ -7,7 +8,7 @@ import AnimatedTitle from "./AnimatedTitle";
 const FloatingImage = () => {
   const frameRef = useRef<HTMLImageElement>(null);
 
-  const handleMouseMove = (e: { clientX: any; clientY: any; }) => {
+  const handleMouseMove = (e: MouseEvent<HTMLImageElement>) => {
     const { clientX, clientY } = e;
     const element = frameRef.current;
 
@@ -49,7 +50,7 @@ const FloatingImage = () => {
     <div id="story" className="min-h-dvh w-screen bg-black text-blue-50">
       <div className="flex size-full flex-col items-center py-10 pb-24">
         <p className="font-general text-sm uppercase md:text-[10px]">
-          the multiversal ip world
+          the multiversal IP world
         </p>
 
         <div className="relative size-full">
@@ -113,7 +114,7 @@ const FloatingImage = () => {
 
             <Button
               id="realm-btn"
-              title="discover prologue"
+              title="Discover Prologue"
               containerClass="mt-5"
             />
           </div>
